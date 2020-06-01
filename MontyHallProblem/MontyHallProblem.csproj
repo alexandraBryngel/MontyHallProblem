@@ -163,6 +163,8 @@
     </Compile>
     <Compile Include="Models\Door.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameSimulation.cs" />
+    <Compile Include="Models\PlayedGames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sevice\GameService.cs" />
   </ItemGroup>
@@ -267,7 +269,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55150</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44360/</IISUrl>
+          <IISUrl>http://localhost:44360/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MontyHallProblem.Models;
+using MontyHallProblem.Sevice;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +11,12 @@ namespace MontyHallProblem.Controllers
 {
     public class GameController : ApiController
     {
-
-        public  IEnumerable<Game> SimulateGames(int NumberOfGames, bool ChangeDoor)
+        [HttpPost]
+        public  PlayedGames SimulateGames([FromBody] GameSimulation gameSimulation)
         {
+            var service = new GameService();
 
+            return service.SimulateGames(gameSimulation.NumberOfGames, gameSimulation.ChangeDoor);
         }
     }
 }

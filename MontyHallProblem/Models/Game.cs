@@ -7,27 +7,18 @@ namespace MontyHallProblem.Models
 {
     public class Game
     {
-        public Door FirstDoor { get; set; }
-
-        public Door SecondDoor { get; set; }
-
-        public Door ThirdDoor { get; set; }
-
         public List<Door> Doors { get; set; }
+        public bool win { get; set; }
 
         public Game()
         {
-            FirstDoor = new Door();
-            SecondDoor = new Door();
-            ThirdDoor = new Door();
+            Doors = new List<Door>();
 
-            Doors.Add(FirstDoor);
-            Doors.Add(SecondDoor);
-            Doors.Add(ThirdDoor);
+            Doors.Add(new Door());
+            Doors.Add(new Door());
+            Doors.Add(new Door());
 
-            var rand = new Random();
-
-            Doors[rand.Next(1, Doors.Count)].HasMoney = true;
+            
         }
     }
 }
